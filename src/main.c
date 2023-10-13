@@ -136,6 +136,14 @@ int main(int argc, char** argv)
 
 	bool** generation = initGeneration(size_x, size_y);
 	
+	generation[2][0] = true;
+	generation[2][1] = true;
+	generation[2][2] = true;
+	generation[0][1] = true;
+	generation[1][2] = true;
+	
+	printGeneration(generation, size_x, size_y);
+	
 	for (int i = 0; i < generationNum; i++)
 	{
 		simulate_generation(&generation, size_x, size_y);
